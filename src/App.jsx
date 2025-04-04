@@ -2,6 +2,7 @@ import { useState } from 'react' //importando funcion
 import reactLogo from './assets/react.svg' //variable
 import viteLogo from '/vite.svg'
 import './App.css'  
+import Boton from './Componnet.jsx'
 
 function App() {
   const [count, setCount] = useState(0) //hook(er) de estado
@@ -22,10 +23,13 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <Boton texto={"pea"} onClick={() => setCount((count) => count + 1)}/>
+      
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+  
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
