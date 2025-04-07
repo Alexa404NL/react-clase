@@ -3,38 +3,22 @@ import reactLogo from './assets/react.svg' //variable
 import viteLogo from '/vite.svg'
 import './App.css'  
 import Boton from './Componnet.jsx'
+import Initial from './views/Initial.jsx'
+import Login from './views/login.jsx'
+import Profile from './views/profile.jsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0) //hook(er) de estado
-  //useState toma variable de count y actualiza el valor de setCount MODIFICANDO el DOM real (la pagina en la web)
-  // el DOM virtual es una copia del DOM real, y React se encarga de actualizar el DOM real cuando el DOM virtual cambia
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <Boton texto={"pea"} onClick={() => setCount((count) => count + 1)}/>
-      
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-  
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" element={ <Initial/>}/>
+          <Route path="/" element={ <Login/>}/>
+          <Route path="/user/profile" element={ <Profile/>}/>
+          <Route path="/boton" element={ <Boton texto={"prueba de vistas"}/>}/>
+        </Routes>
+      </BrowserRouter>
+    );
 }
 
 export default App
