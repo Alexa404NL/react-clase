@@ -4,15 +4,18 @@ import viteLogo from '/vite.svg'
 import '../App.css'  
 import Boton from '../Componnet.jsx'
 import ResponsiveAppBar from '../appvar.jsx'
+import Footer from "../Footer.jsx"
 
 function  profile() {
   
   return (
     <>
-    <ResponsiveAppBar></ResponsiveAppBar>
+    
     <h1> PROFILE</h1>
     <h2> esta es la vista de perfil</h2>
+  
     </>
+
   )
 }
 

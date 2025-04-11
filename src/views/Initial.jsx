@@ -5,6 +5,7 @@ import '../App.css'
 import Boton from '../Componnet.jsx'
 import ResponsiveAppBar from '../appvar.jsx'
 
+import Footer from "../Footer.jsx"
 function Initial() {
   const [count, setCount] = useState(0) //hook(er) de estado
   //useState toma variable de count y actualiza el valor de setCount MODIFICANDO el DOM real (la pagina en la web)
@@ -13,7 +14,7 @@ function Initial() {
   return (
     <>
       <div>
-      <ResponsiveAppBar></ResponsiveAppBar>
+      
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -36,6 +37,7 @@ function Initial() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+   
     </>
   )
 }
